@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GitHub Wrapped</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>GitHub Wrapped</h1>
+    <div class="searchUser">
+        <input id="username" placeholder="enter GitHub username">
+        <button onclick="analyze()">Give me my GitHub Wrapped!</button>
+    </div>
+
+    <div id="profile" class="card profile"></div>
+    <div class="grid">
+
+        <div class="card">
+            <h3> ⟡ Language Breakdown</h3>
+            <canvas id="languageChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3> ⟡ Developer Types</h3>
+            <canvas id="typeChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3> ⟡ Code Activity by Week</h3>
+            <canvas id="weekdayChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3> ⟡ Time Coding</h3>
+            <canvas id="hourChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3> 🌿 ‧₊˚ Repo Growth ‧₊˚ 🌿⋅</h3>
+            <canvas id="timelineChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>˗ˏˋ ★ ˎˊ˗ Top Repositories ˗ˏˋ ★ ˎˊ˗</h3>
+            <canvas id="topReposChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>˚ ༘ ⋆｡˚Coding Consistency˚ ༘ ⋆｡˚ </h3>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>⌕ Dev Insights</h3>
+            <div id="insights"></div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
