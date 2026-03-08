@@ -139,7 +139,7 @@ function generateCharts(programmingLanguages, types, weekActivity, timeline, top
             datasets: [{ label: "Stars", data: topRepos.map(r => r.stars), backgroundColor: colours }]
         },
         options: {
-            indexAcxis: "y"
+            indexAxis: "y"
         }
     }));
 }
