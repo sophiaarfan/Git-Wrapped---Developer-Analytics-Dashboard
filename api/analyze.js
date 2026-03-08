@@ -36,12 +36,20 @@ export default async function handler(req, res) {
         );
 
         const data = await AIresponse.json();
+        console.log('Gemini raw response:', JSON.stringify(data));
 
         if (data.error) {
+            console.error('Gemini API error:', data.error);
             return res.status(500).json({ error: data.error.message });
         }
 
+        if (!data.candidates || data.candidates.length === 0) {
+            console.error('No candidates in response:', JSON.stringify(data));
+            return res.status(500).json({ error: 'No response from Gemini' });
+        }
+
         const raw = data.candidates[0].content.parts[0].text;
+        console.log('Raw text:', raw);
 
         const clean = raw.replace(/```json|```/g, "").trim();
         const archetype = JSON.parse(clean);
@@ -49,7 +57,7 @@ export default async function handler(req, res) {
         res.status(200).json(archetype);
 
     } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Something went wrong analyzing your profile.' });
+        console.error('Error:', error.message, error.stack);
+        res.status(500).json({ error: error.message });
     }
 }
