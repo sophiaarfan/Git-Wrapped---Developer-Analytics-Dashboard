@@ -38,4 +38,5 @@ This project uses a Vercel serverless function to keep the Gemini API key secure
  GEMINI_API_KEY=your_key_here
  ```
 4. Open `http://localhost:3000`
+
 **Running non-AI features**: Simply download the project and open the `index.html` page to interact with the application.
