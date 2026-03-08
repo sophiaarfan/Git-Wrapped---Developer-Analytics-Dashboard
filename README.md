@@ -1,5 +1,5 @@
 ## GitHub Wrapped
-A Spotify Wrapped-style year-in-review for your GitHub profile. Enter any GitHub username to get a visual breakdown of their coding activity, top languages, repo growth, and an AI-generated developer archetype.
+A Spotify Wrapped-inspired review for your GitHub profile. Enter any GitHub username to get a visual breakdown of their coding activity, top languages, repo growth, and an AI-generated developer archetype.
 ## Features
 - **Language Breakdown**: A pie chart for languages mainly used across all users’ repos
 - **Developer Type**: Classifies the number of repos made based on their type (i.e., General, Technical, or Creative projects)
