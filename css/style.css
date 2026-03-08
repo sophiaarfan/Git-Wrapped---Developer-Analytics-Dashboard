@@ -74,3 +74,74 @@ canvas {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+.card.archetype{
+    grid-column: 1/-1;
+}
+.archetype-loading {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    color: #ec066a;
+}
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid #d3036e;
+    border-top-color: #b91371;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.archetype-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.archetype-emoji {
+    font-size: 13px;
+    line-height: 1;
+}
+
+.archetype-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #b91371;
+}
+
+.archetype-badge {
+    background: #fad2e7;
+    color: #9e054f;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.archetype-description {
+    max-width: 600px;
+    line-height: 1.6;
+    color: #7a3a5c;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card.wide,
+    .card.archetype-card {
+        grid-column: span 1;
+    }
+}
