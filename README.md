@@ -23,11 +23,11 @@ AI — Google Gemini API (`gemini-2.0-flash`)
 Hosting — Vercel (serverless functions for API key security)
 
 ## Project Structure
-`index.html` #main page
-`css/style.css`  # styles
-`js/script.js`  # frontend logic + chart generation
-`vercel.json`# vercel routing config
-`api/analyze.js` # serverless function, calls Gemini API
+- `index.html` main page
+- `css/style.css` styles
+- `js/script.js` frontend logic + chart generation
+- `vercel.json` vercel routing config
+- `api/analyze.js` serverless function, calls Gemini API
 
 ## Running Locally
 This project uses a Vercel serverless function to keep the Gemini API key secure. To run locally:
