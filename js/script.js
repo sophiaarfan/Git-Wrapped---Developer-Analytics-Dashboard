@@ -180,14 +180,12 @@ async function fetchArchetype(profile,repos) {
             <div class="archetype-result">
                 <div class="archetype-emoji">${archetype.emoji}</div>
                 <div class="archetype-title">${archetype.archetype}</div>
-                <div class="archetype-badge">${archetype.badge}</div>
                 <p class="archetype-description">${archetype.description}</p>
-                <div class="archetype-roast">💬 "${archetype.roast}"</div>
             </div>`;
     }catch(error) {
         console.error('archetype fetch failed:', error);
         content.innerHTML=`<p style "color:red"> Couln't load your archetype :( -- check console for details</p>`;
-        
+
     }
 }
 

@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     Their repositories:
     ${repoSummary}
 
-    Based on this data respond ONLY with a JSON object(NO markdown, NO explanation) in this exact format:
+    Based on this data respond ONLY with a JSON object(NO markdown, NO explanation) in this exact format: {
     "archetype": "The [Creative Title]",
     "emoji": "[One emoji matching the archetype chosen]"
     "description: "[2 Sentences describing their coding personality in a fun and witty way. Be specific to their actual data, mention real repo names or patterns noticed when possible Make it personal and a little playful.]"
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
             }
         );
 
-        const data = await response.json();
+        const data = await AIresponse.json();
 
         if (data.error) {
             return res.status(500).json({ error: data.error.message });
