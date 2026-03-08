@@ -14,7 +14,7 @@ A Spotify Wrapped-inspired review for your GitHub profile. Enter any GitHub user
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-F26A8D?style=for-the-badge&logo=google-chrome&logoColor=white)](https://git-wrapped-one.vercel.app)
 
 ## Note on the AI Archetype Feature
-The AI archetype is powered by Google Gemini AI on the free tier. The free tier has a daily request limit, so if the archetype section shows an error, it likely means the quota has been reached. However, all cards other than the "archetype" card should function as intended.
+The AI archetype is powered by Google Gemini AI on the free tier. The free tier has a request limit, so if the archetype section shows an error, it likely means the quota has been reached. However, all cards other than the "archetype" card should function as intended.
 Tech Stack
 Frontend — HTML, CSS, JavaScript
 Charts — Chart.js
