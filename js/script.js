@@ -20,6 +20,7 @@ async function analyze() {
         }
         displayProfile(profile);
         analyzeRepos(repos);
+        fetchArchetype(profile, repos)
     } catch (error) {
         console.error("Error fetching data from GitHub API:", error);
         alert("An error occurred while fetching data. Please try again later.");
@@ -154,6 +155,40 @@ function generateWrapped(programmingLanguages, weekActivity) {
         <p><strong>Top Language:</strong> ${topLanguage}</p>
         <p><strong>Most active day of the week:</strong> ${mostActiveDay}</p>
     `;
+}
+
+async function fetchArchetype(profile,repos) {
+    const card = document.getElementById("archetypeCard");
+    const content = document.getElementById("archetypeContent");
+
+    card.style.display = "block";
+    content.innerHTML = `
+        <div class="archetype-loading">
+            <div class="spinner"></div>
+            <p>Gemini is analyzing your commits...</p>
+        </div>`;
+
+    try {
+        const response = await fetch('/api/analyze', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ profile, repos })
+        });
+        if(!response.ok) throw new Error('call to API failed');
+        const archetype= await response.json();
+        content.innerHTML  =`
+            <div class="archetype-result">
+                <div class="archetype-emoji">${archetype.emoji}</div>
+                <div class="archetype-title">${archetype.archetype}</div>
+                <div class="archetype-badge">${archetype.badge}</div>
+                <p class="archetype-description">${archetype.description}</p>
+                <div class="archetype-roast">💬 "${archetype.roast}"</div>
+            </div>`;
+    }catch(error) {
+        console.error('archetype fetch failed:', error);
+        content.innerHTML=`<p style "color:red"> Couln't load your archetype :( -- check console for details</p>`;
+        
+    }
 }
 
 
