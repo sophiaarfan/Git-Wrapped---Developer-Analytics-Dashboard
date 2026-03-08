@@ -169,7 +169,7 @@ async function fetchArchetype(profile,repos) {
         </div>`;
 
     try {
-        const response = await fetch('/api/analyze', {
+        const response = await fetch('api/analyze.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ profile, repos })
