@@ -15,12 +15,13 @@ A Spotify Wrapped-inspired review for your GitHub profile. Enter any GitHub user
 
 ## Note on the AI Archetype Feature
 The AI archetype is powered by Google Gemini AI on the free tier. The free tier has a request limit, so if the archetype section shows an error, it likely means the quota has been reached. However, all cards other than the "archetype" card should function as intended.
-Tech Stack
-Frontend — HTML, CSS, JavaScript
-Charts — Chart.js
-Data — GitHub REST API (no auth required)
-AI — Google Gemini API (`gemini-2.0-flash`)
-Hosting — Vercel (serverless functions for API key security)
+
+## Tech Stack
+- Frontend — HTML, CSS, JavaScript
+- Charts — Chart.js
+- Data — GitHub REST API (no auth required)
+- AI — Google Gemini API (`gemini-2.0-flash`)
+- Hosting — Vercel (serverless functions for API key security)
 
 ## Project Structure
 - `index.html` main page
