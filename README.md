@@ -9,7 +9,10 @@ A Spotify Wrapped-style year-in-review for your GitHub profile. Enter any GitHub
 - **Top Repositories**: your most starred projects
 -  **Coding Consistency**: monthly repo creation patterns
 -  **AI Developer Archetype**: Gemini AI reads your profile and gives you a fun personality archetype
+
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-%23780000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://git-wrapped-one.vercel.app)
+
 ## Note on the AI Archetype Feature
 The AI archetype is powered by Google Gemini AI on the free tier. The free tier has a daily request limit, so if the archetype section shows an error, it likely means the quota has been reached. However, all cards other than the "archetype" card should function as intended.
 Tech Stack
@@ -18,6 +21,7 @@ Charts — Chart.js
 Data — GitHub REST API (no auth required)
 AI — Google Gemini API (`gemini-2.0-flash`)
 Hosting — Vercel (serverless functions for API key security)
+
 ## Project Structure
 git-wrapped/
 ├── index.html        # Main page
