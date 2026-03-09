@@ -184,7 +184,7 @@ async function fetchArchetype(profile,repos) {
             </div>`;
     }catch(error) {
         console.error('archetype fetch failed:', error);
-        content.innerHTML=`<p style "color:red"> Couln't load your archetype :( -- check console for details</p>`;
+        content.innerHTML=`<p style "color:red"> Couln't load your archetype :( -- Creator's Gemini AI free tier usage quota is full. </p>`;
 
     }
 }
