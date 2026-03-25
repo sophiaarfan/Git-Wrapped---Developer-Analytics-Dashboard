@@ -165,7 +165,7 @@ async function fetchArchetype(profile,repos) {
     content.innerHTML = `
         <div class="archetype-loading">
             <div class="spinner"></div>
-            <p>Gemini is analyzing your commits...</p>
+            <p>Claude is analyzing your commits...</p>
         </div>`;
 
     try {
